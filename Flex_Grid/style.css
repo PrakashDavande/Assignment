@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+/* Assigment 1 */
+.flex {
+    position: relative;
+    color: rgb(242, 237, 237);
+    font-size: xx-large;
+    text-align: center;
+    font-weight: 800;
+    height: 800px;
+    width: 1000px;
+    margin: 0 100px 100px 100px;
+    background-color: pink;
+}
+
+.header {
+    position: absolute;
+    background-color: aquamarine;
+    height: 70px;
+    width: 850px;
+    margin: 50px 100px;
+    align-items: center;
+}
+
+.article_aside {
+    display: flex;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+
+.article {
+    display: flex;
+    height: 400px;
+    width: 600px;
+    background-color: palevioletred;
+    margin: 10px;
+}
+
+.aside {
+    margin: 10px;
+    height: 400px;
+    width: 200px;
+    background-color: rgb(15, 115, 82);
+}
+
+.image {
+    position: relative;
+    top: 150px;
+    right: 20px;
+    height: 200px;
+    width: 150px;
+    margin: 10px;
+    background-color: gray;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    background-color: aquamarine;
+    height: 70px;
+    width: 850px;
+    margin: 50px 100px;
+    align-items: center;
+}
+
+/* Assigment2 */
+.grid-container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-areas:
+        'Grapes Strawberries Watermelon Watermelon'
+        'Orangae Orangae Watermelon Watermelon'
+        'Papaya Papaya Pineapple Pineapple';
+    padding: 10px;
+    gap: 10px;
+    margin: 50px;
+}
+
+.grid-container img {
+    height: 100px;
+    width: 100px;
+}
+
+.Grapes {
+    grid-area: Grapes;
+}
+
+.Strawberries {
+    grid-area: Strawberries;
+}
+
+.Orange {
+    grid-area: Orangae;
+}
+
+.Watermelon {
+    grid-area: Watermelon;
+}
+
+.Papaya {
+    grid-area: Papaya;
+}
+
+.Pineapple {
+    grid-area: Pineapple;
+}
+
+.grid-item {
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item {
+    overflow: hidden;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas:
+        "gridItem1 gridItem2 gridItem3"
+        "gridItem1 gridItem4 gridItem4";
+    gap: 20px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-image: url('background.jpeg');
+}
+
+.gridItem {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gridItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.overlay .highlight {
+    color: yellow;
+}
+
+.gridItem1 {
+    grid-area: gridItem1;
+}
+
+.gridItem2 {
+    grid-area: gridItem2;
+}
+
+.gridItem3 {
+    grid-area: gridItem3;
+}
+
+.gridItem4 {
+    grid-area: gridItem4;
+    margin-left: 200px;
+}
+
+.navbarResponsive {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff4500;
+    padding: 10px 20px;
+    color: white;
+    margin: 10px;
+   
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 5px;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    border: none;
+    background-color: white;
+    color: #ff4500;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .navbarResponsive {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        display: flex;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .search-bar input {
+        flex: 1;
+    }
+}
+
+/* Assigment2 */
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #6a1b9a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .header2 {
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .articlesResponsives {
+    display: flex;
+    flex-direction: column;
+    background-color: #e0f7fa;
+    color: #000;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .articlesResponsive {
+    padding: 20px;
+    background-color: #4dd0e1;
+    border-radius: 5px;
+  }
+
+  @media (min-width: 768px) {
+    .articlesResponsives {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .articlesResponsive {
+      flex: 1;
+      margin: 0 10px;
+    }
+
+    .articlesResponsive:first-child {
+      margin-left: 0;
+    }
+
+    .articlesResponsive:last-child {
+      margin-right: 0;
+    }
+  }
